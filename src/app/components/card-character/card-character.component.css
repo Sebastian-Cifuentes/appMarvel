@@ -1,0 +1,94 @@
+.card-character {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.image-title {
+    display: flex;
+}
+
+.image-character>img {
+    border-radius: 90px;
+    box-shadow: 2px 2px 15px #cfcfcf;
+    margin: -10px 0 0 -10px;
+    object-fit: cover;
+}
+
+.title-character {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.title-character--desc {
+    padding: 10px 0;
+}
+
+.title-character--button {
+    background-color: #EC1E23;
+    border: 1px solid #EC1E23;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.related-comics {
+    padding: 20px;
+}
+
+.related-comics-titles {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.related-comics-titles>p {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 50%;
+}
+
+.character-desc {
+    display: flex;
+}
+
+.character-img>img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.buttons-modal {
+    width: 100%;
+    margin: 0%;
+}
+
+.buttons-modal>button {
+    border: 0;
+    outline: none;
+    height: 50px;
+    width: 50%;
+}
+
+.btn-add-favorites {
+    background-color: #F0F0F0;
+}
+
+.btn-add-favorites>span {
+    margin-left: 10px;
+    color: #3D3332;
+    font-weight: bold;
+}
+
+.btn-add-buy {
+    background-color: #DCDCDC;
+}
+
+.btn-add-buy>span {
+    margin-left: 10px;
+    color: #EC1D23;
+    font-weight: bold;
+}
+
+.modal-footer {
+    padding: 0;
+}

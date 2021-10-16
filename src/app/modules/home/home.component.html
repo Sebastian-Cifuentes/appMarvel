@@ -1,0 +1,36 @@
+<div class="grid-main">
+    <!-- Header -->
+    <div class="header">
+        <app-header (onresults)="resultsFound($event)"></app-header>
+    </div>
+
+    <main class="main">
+
+        <div class="sort">
+            <div class="logo-characters">
+                <img src="assets/icons/characters.png" alt="characters">
+                <p>Characters</p>
+            </div>
+            <div class="sort-by">
+                <app-sort-by (onresultssort)="resultsFound($event)"></app-sort-by>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="only-card" *ngFor="let character of characters">
+                <app-card-character [character]="character"></app-card-character>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

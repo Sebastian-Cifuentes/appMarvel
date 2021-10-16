@@ -1,0 +1,13 @@
+.header {
+    padding: 7px;
+}
+
+.logo {
+    float: left;
+    margin-left: 50px;
+}
+
+.search {
+    width: 40%;
+    margin: 0 auto;
+}

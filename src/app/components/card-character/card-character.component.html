@@ -1,0 +1,45 @@
+<div class="card-character">
+    <div class="image-title">
+        <div class="image-character">
+            <img [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt="" width="150" height="150">
+        </div>
+        <div class="title-character">
+            <h2>{{character.name}}</h2>
+            <p class="title-character--desc">{{ character.description }}</p>
+            <button class="title-character--button pointer" (click)="openModal(content)">VIEW MORE</button>
+        </div>
+    </div>
+    <div class="related-comics">
+        <h3>Related comics</h3>
+        <div class="related-comics-titles">
+            <p class="pointer" *ngFor="let item of character.comics.items; let i = index" (click)="getComic(item.resourceURI, content)">{{ item.name }}</p>
+        </div>
+    </div>
+</div>
+
+<ng-template #content>
+    <div class="modal-body">
+        <div class="character-desc">
+            <div class="character-img">
+                <img [src]="comic?.thumbnail?.path + '.' + comic?.thumbnail?.extension" alt="">
+            </div>
+            <div class="title-desc">
+                <h2>{{comic?.title}}</h2>
+                <p>{{comic?.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="buttons-modal">
+            <button class="btn-add-favorites">
+                <img src="assets/icons/btn-favourites-default.png" alt="">
+                <span>ADD TO FAVOURITES</span>
+            </button>
+            <button class="btn-add-buy">
+                <img src="assets/icons/shopping-cart-primary.png" alt="">
+                <span>BUY FOR $3.99</span>
+            </button>
+        </div>
+    </div>
+
+</ng-template>

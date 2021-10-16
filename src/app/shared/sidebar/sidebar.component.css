@@ -1,0 +1,12 @@
+.title-favorites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.title-favorites>p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+.search-input {
+    position: relative;
+}
+
+.search-input>input {
+    padding: 6px 12px;
+    outline: none;
+    width: 100%;
+}
+
+.search-input>img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

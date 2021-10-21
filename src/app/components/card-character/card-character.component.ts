@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Character } from '../character/character.interface';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ComicsService } from '../comics/comics.service';
@@ -12,6 +12,7 @@ import { Comic } from '../comics/comic.interface';
 export class CardCharacterComponent implements OnInit {
 
   @Input() character!: Character;
+  @Output() onfavorite: EventEmitter<Comic> = new EventEmitter();
   comic!: Comic;
 
   constructor(
@@ -33,6 +34,10 @@ export class CardCharacterComponent implements OnInit {
         console.log(this.comic)
         this.openModal(content);
       })
+  }
+
+  addToFavorite() {
+    this.onfavorite.emit(this.comic);
   }
 
 }

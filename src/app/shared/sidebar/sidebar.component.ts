@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Comic } from '../../components/comics/comic.interface';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,15 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  favorites: any[] = [];
+  @Input() favorites: Comic[] = [];
+  @Output() ondelete: EventEmitter<number> = new EventEmitter(); 
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addToFavorite() {
-
+  delete(id: number) {
+    this.ondelete.emit(id)
   }
 
 }

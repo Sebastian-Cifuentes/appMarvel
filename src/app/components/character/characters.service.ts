@@ -15,6 +15,7 @@ export class CharactersService {
     .set('ts', '9')
     .set('apikey', environment.apiKey)
     .set('hash', environment.hash)
+    .set('limit', '100');
 
   constructor(
     private http: HttpClient

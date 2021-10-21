@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Comic } from '../comics/comic.interface';
 
 @Component({
   selector: 'app-card-favorite',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardFavoriteComponent implements OnInit {
 
+  @Input() comic!: Comic;
+  @Output() ondelete: EventEmitter<number> = new EventEmitter(); 
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.comic)
+  }
+
+  delete(id: number) {
+    this.ondelete.emit(id);
   }
 
 }

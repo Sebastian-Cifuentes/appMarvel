@@ -1,1 +1,3 @@
-<p>pagination works!</p>
+<button (click)="chnagePag(-10, 'previous')"> < </button>
+<button *ngFor="let pag of paginators" (click)="change(pag)"> {{pag}} </button>
+<button (click)="chnagePag(10, 'next')"> > </button>

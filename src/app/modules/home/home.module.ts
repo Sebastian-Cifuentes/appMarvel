@@ -9,6 +9,7 @@ import { SearchComponent } from '../../components/search/search.component';
 import { CardCharacterComponent } from '../../components/card-character/card-character.component';
 import { CardFavoriteComponent } from '../../components/card-favorite/card-favorite.component';
 import { SortByComponent } from '../../components/sort-by/sort-by.component';
+import { PaginationComponent } from 'src/app/components/pagination/pagination.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,7 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
     HomeComponent,
+    PaginationComponent,
     SidebarComponent,
     SearchComponent,
     SortByComponent,

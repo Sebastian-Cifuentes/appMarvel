@@ -58,3 +58,24 @@
     width: 48%;
     padding: 20px 0;
 }
+
+.pagination-p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    .grid-main {
+        display: grid;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-template-columns: 100%;
+        grid-template-rows: auto 100% auto;
+    }
+    .sidebar {
+        display: none;
+    }
+    .only-card {
+        width: 100%;
+    }
+}

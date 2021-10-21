@@ -18,8 +18,12 @@
 
         <div class="cards">
             <div class="only-card" *ngFor="let character of characters">
-                <app-card-character [character]="character"></app-card-character>
+                <app-card-character (onfavorite)="addFavorite($event)" [character]="character"></app-card-character>
             </div>
+        </div>
+
+        <div class="pagination-p">
+            <app-pagination *ngIf="cutCharacters.length > 0 || copyCharacters.length > 10" [pags]="cutCharacters" (onchangepag)="setCharacters($event)"></app-pagination>
         </div>
 
     </main>
@@ -27,7 +31,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <app-sidebar></app-sidebar>
+        <app-sidebar [favorites]="favorites" (ondelete)="deleteFavorite($event)"></app-sidebar>
     </div>
     <!-- Footer -->
     <div class="footer">

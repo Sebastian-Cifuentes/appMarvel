@@ -1,9 +1,9 @@
 <div class="card-favorite">
     <div class="image-title-favorite">
-        <div class="logo-trash">
-            <img src="assets/icons/btn-delete.png" alt="">
+        <div class="logo-trash pointer" (click)="delete(comic.id)">
+            <img src="assets/icons/btn-delete.png" alt="eliminar">
         </div>
-        <img src="assets/spider.jpg">
-        <p>Comic tile mauris non tempor quam</p>
+        <img [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension">
+        <p>{{ comic.title }}</p>
     </div>
 </div>
